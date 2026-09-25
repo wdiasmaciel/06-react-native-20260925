@@ -13,21 +13,33 @@ export default function TelaInicial() {
         <Text style={styles.titulo}>Tela Inicial</Text>
       </View>
 
+      { /* 
+         * StyleSheet.flatten(): converte um array de objetos de estilo em 
+         * um único objeto de estilo agregado.
+         */}
       <Link href="/screens/login" asChild>
-        <TouchableOpacity style={styles.botao}>
-          <Text style={styles.textoDoBotao}>Ir para a tela de login</Text>
+        <TouchableOpacity style={StyleSheet.flatten([styles.botao, styles.botaoDentroDeLink])}>
+          <Text style={styles.textoDoBotao}>[Botão Dentro de Link] Ir para a tela de login</Text>
         </TouchableOpacity>
       </Link>
 
+      { /* 
+         * StyleSheet.flatten(): converte um array de objetos de estilo em 
+         * um único objeto de estilo agregado.
+         */}
       <Link href="/screens/cadastro" asChild>
-        <TouchableOpacity style={styles.botao}>
-          <Text style={styles.textoDoBotao}>Ir para a tela de cadastro</Text>
+        <TouchableOpacity style={StyleSheet.flatten([styles.botao, styles.botaoDentroDeLink])}>
+          <Text style={styles.textoDoBotao}>[Botão Dentro de Link] Ir para a tela de cadastro</Text>
         </TouchableOpacity>
       </Link>
 
+      { /* 
+         * StyleSheet.flatten(): converte um array de objetos de estilo em 
+         * um único objeto de estilo agregado.
+         */}
       <Link href="/screens/home" asChild>
-        <TouchableOpacity style={styles.botao}>
-          <Text style={styles.textoDoBotao}>Ir para a tela home</Text>
+        <TouchableOpacity style={StyleSheet.flatten([styles.botao, styles.botaoDentroDeLink])}>
+          <Text style={styles.textoDoBotao}>[Botão Dentro de Link] Ir para a tela home</Text>
         </TouchableOpacity>
       </Link>
     </View>
@@ -53,6 +65,9 @@ const styles = StyleSheet.create({
     padding: 12,
     borderRadius: 6,
     marginBottom: 12, // margem inferior
+  },
+  botaoDentroDeLink: {
+    backgroundColor: '#0fb92e'
   },
   textoDoBotao: {
     color: '#fff',

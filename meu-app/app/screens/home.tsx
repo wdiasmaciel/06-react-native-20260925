@@ -15,7 +15,7 @@ export default function Home() {
          */}
       <Link href="/screens/login" asChild>
         <TouchableOpacity style={StyleSheet.flatten([styles.botao, styles.botaoDentroDeLink])}      >
-          <Text style={styles.textoDoBotao}>Ir para a tela de login</Text>
+          <Text style={styles.textoDoBotao}>[Botão Dentro de Link] Ir para a tela de login</Text>
         </TouchableOpacity>
       </Link>
 
@@ -25,7 +25,7 @@ export default function Home() {
          */}
       <Link href="/screens/cadastro" asChild>
         <TouchableOpacity style={StyleSheet.flatten([styles.botao, styles.botaoDentroDeLink])}>
-          <Text style={styles.textoDoBotao}>Ir para a tela de cadastro</Text>
+          <Text style={styles.textoDoBotao}>[Botão Dentro de Link] Ir para a tela de cadastro</Text>
         </TouchableOpacity>
       </Link>
 

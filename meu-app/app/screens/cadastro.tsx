@@ -13,15 +13,23 @@ export default function Cadastro() {
         <Text style={styles.textoDoBotao}>Voltar para a tela inicial</Text>
       </TouchableOpacity>
 
+      { /* 
+         * StyleSheet.flatten(): converte um array de objetos de estilo em 
+         * um único objeto de estilo agregado.
+         */}
       <Link href="/screens/login" asChild>
-        <TouchableOpacity style={styles.botao}>
-          <Text style={styles.textoDoBotao}>Ir para a tela de login</Text>
+        <TouchableOpacity style={StyleSheet.flatten([styles.botao, styles.botaoDentroDeLink])}>
+          <Text style={styles.textoDoBotao}>[Botão Dentro de Link] Ir para a tela de login</Text>
         </TouchableOpacity>
       </Link>
 
+      { /* 
+         * StyleSheet.flatten(): converte um array de objetos de estilo em 
+         * um único objeto de estilo agregado.
+         */}
       <Link href="/screens/home" asChild>
-        <TouchableOpacity style={styles.botao}>
-          <Text style={styles.textoDoBotao}>Ir para a tela home</Text>
+        <TouchableOpacity style={StyleSheet.flatten([styles.botao, styles.botaoDentroDeLink])}>
+          <Text style={styles.textoDoBotao}>[Botão Dentro de Link] Ir para a tela home</Text>
         </TouchableOpacity>
       </Link>
     </View>
@@ -36,6 +44,9 @@ const styles = StyleSheet.create({
     padding: 12,
     borderRadius: 6,
     marginBottom: 12,
+  },
+  botaoDentroDeLink: {
+    backgroundColor: 'orange'
   },
   textoDoBotao: {
     color: '#fff',

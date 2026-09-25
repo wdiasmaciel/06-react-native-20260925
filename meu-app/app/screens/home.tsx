@@ -9,12 +9,20 @@ export default function Home() {
     <View style={styles.container}>
       <Text style={styles.titulo}>Home</Text>
 
+      { /* 
+         * StyleSheet.flatten(): converte um array de objetos de estilo em 
+         * um único objeto de estilo agregado.
+         */}
       <Link href="/screens/login" asChild>
         <TouchableOpacity style={StyleSheet.flatten([styles.botao, styles.botaoDentroDeLink])}      >
           <Text style={styles.textoDoBotao}>Ir para a tela de login</Text>
         </TouchableOpacity>
       </Link>
 
+      { /* 
+         * StyleSheet.flatten(): converte um array de objetos de estilo em 
+         * um único objeto de estilo agregado.
+         */}
       <Link href="/screens/cadastro" asChild>
         <TouchableOpacity style={StyleSheet.flatten([styles.botao, styles.botaoDentroDeLink])}>
           <Text style={styles.textoDoBotao}>Ir para a tela de cadastro</Text>

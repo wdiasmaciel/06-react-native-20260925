@@ -10,13 +10,13 @@ export default function Home() {
       <Text style={styles.titulo}>Home</Text>
 
       <Link href="/screens/login" asChild>
-        <TouchableOpacity style={styles.botao}>
+        <TouchableOpacity style={StyleSheet.flatten([styles.botao, styles.botaoDentroDeLink])}      >
           <Text style={styles.textoDoBotao}>Ir para a tela de login</Text>
         </TouchableOpacity>
       </Link>
 
       <Link href="/screens/cadastro" asChild>
-        <TouchableOpacity style={styles.botao}>
+        <TouchableOpacity style={StyleSheet.flatten([styles.botao, styles.botaoDentroDeLink])}>
           <Text style={styles.textoDoBotao}>Ir para a tela de cadastro</Text>
         </TouchableOpacity>
       </Link>
@@ -36,6 +36,9 @@ const styles = StyleSheet.create({
     padding: 12,
     borderRadius: 6,
     marginBottom: 12, // margem inferior
+  },
+  botaoDentroDeLink: {
+    backgroundColor: 'red'
   },
   textoDoBotao: {
     color: '#fff',

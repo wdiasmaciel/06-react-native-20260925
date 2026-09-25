@@ -11,6 +11,14 @@ export default function Login() {
       <TouchableOpacity style={styles.botao} onPress={() => router.push('/')}>
         <Text style={styles.textoDoBotao}>Voltar para a tela inicial</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity style={styles.botao} onPress={() => router.push('/screens/cadastro')}>
+        <Text style={styles.textoDoBotao}>Ir para a tela de cadastro</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.botao} onPress={() => router.push('/screens/home')}>
+        <Text style={styles.textoDoBotao}>Ir para a tela home</Text>
+      </TouchableOpacity>
     </View>
   );
 }
